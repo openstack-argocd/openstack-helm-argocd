@@ -28,8 +28,10 @@ metadata:
   labels:
 {{ tuple $envAll "keystone" "domain-manage" | include "helm-toolkit.snippets.kubernetes_metadata_labels" | indent 4 }}
   annotations:
+  {{- if .Values.helm3_hook }}
     "helm.sh/hook": post-install,post-upgrade
     "helm.sh/hook-delete-policy": before-hook-creation
+  {{- end }}  
 {{ tuple $serviceAccountName $envAll | include "helm-toolkit.snippets.custom_job_annotations" | indent 4 }}
 spec:
   template:
