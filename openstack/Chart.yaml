@@ -2,19 +2,19 @@ apiVersion: v2
 appVersion: 1.16.0
 dependencies:
 - name: helm-toolkit
-  repository: file://../../openstack-helm-infra/helm-toolkit
+  repository: file://../openstack-helm-infra/helm-toolkit
   version: ">0.1.0"
   condition: helm-toolkit.enabled
 - name: mariadb
-  repository: file://../../openstack-helm-infra/mariadb
+  repository: file://../openstack-helm-infra/mariadb
   version: ">0.1.0"
   condition: mariadb.enabled
 - name: rabbitmq
-  repository: file://../../openstack-helm-infra/rabbitmq
+  repository: file://../openstack-helm-infra/rabbitmq
   version: ">0.1.0"
   condition: rabbitmq.enabled
 - name: memcached
-  repository: file://../../openstack-helm-infra/memcached
+  repository: file://../openstack-helm-infra/memcached
   version: ">0.1.0"
   condition: memcached.enabled
 - name: keystone
@@ -30,11 +30,11 @@ dependencies:
   version: ">0.1.0"
   condition: glance.enabled
 - name: openvswitch
-  repository: file://../../openstack-helm-infra/openvswitch
+  repository: file://../openstack-helm-infra/openvswitch
   version: ">0.1.0"
   condition: openvswitch.enabled
 - name: libvirt
-  repository: file://../../openstack-helm-infra/libvirt
+  repository: file://../openstack-helm-infra/libvirt
   version: ">0.1.0"
   condition: libvirt.enabled
 - name: nova
